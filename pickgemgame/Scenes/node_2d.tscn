@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwf01r65srhf6"]
+
+[ext_resource type="PackedScene" uid="uid://dc0pb7uf4k0bk" path="res://Scenes/Players/player_1.tscn" id="1_u0rcb"]
+[ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="2_v3y50"]
+[ext_resource type="PackedScene" uid="uid://cr1l3sw1nrcny" path="res://Scenes/Players/player_2.tscn" id="3_bf46j"]
+[ext_resource type="PackedScene" uid="uid://v3oa5hrpgdag" path="res://Scenes/Ground_Plataforms/one_way_plataform.tscn" id="4_ot3y0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l17ht"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(340, 325)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_l17ht")
+
+[node name="player_1" parent="." instance=ExtResource("1_u0rcb")]
+position = Vector2(72, 100)
+
+[node name="gem" parent="." instance=ExtResource("2_v3y50")]
+position = Vector2(340, 276)
+
+[node name="player_2" parent="." instance=ExtResource("3_bf46j")]
+position = Vector2(489, 128)
+
+[node name="one_way_plataform" parent="." instance=ExtResource("4_ot3y0")]
+position = Vector2(197, 284)
