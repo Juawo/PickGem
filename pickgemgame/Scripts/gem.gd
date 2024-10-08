@@ -9,8 +9,12 @@ func _on_body_entered(body: CharacterBody2D) -> void:
 	
 func add_score(body: CharacterBody2D) -> void:
 	if body.is_in_group("Players"):
+		if(body.name == "player_1"):
+			players_data.score_player_1 += 1
+		else:
+			players_data.score_player_2 += 1
 		body.score += 1
-		print(body.name, " 1+ point!")
+		print("Player 1: ",str(players_data.score_player_1),"\n Player 2: ", str(players_data.score_player_2) )
 
 func change_level(scene : PackedScene):
 	$CollisionShape2D.queue_free()
