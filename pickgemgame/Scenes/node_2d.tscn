@@ -16,13 +16,13 @@ position = Vector2(340, 325)
 shape = SubResource("WorldBoundaryShape2D_l17ht")
 
 [node name="player_1" parent="." instance=ExtResource("1_u0rcb")]
-position = Vector2(72, 100)
+position = Vector2(75, 266)
 
 [node name="gem" parent="." instance=ExtResource("2_v3y50")]
 position = Vector2(340, 276)
 
 [node name="player_2" parent="." instance=ExtResource("3_bf46j")]
-position = Vector2(489, 128)
+position = Vector2(572, 294)
 
 [node name="one_way_plataform" parent="." instance=ExtResource("4_ot3y0")]
 position = Vector2(197, 284)
