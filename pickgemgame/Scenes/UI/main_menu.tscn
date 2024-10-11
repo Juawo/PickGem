@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2505oep3qie3"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_msryi"]
+[ext_resource type="Texture2D" uid="uid://beni33t54d4i6" path="res://Assets/UI_Menu/UI_Moldura.png" id="1_wf6tc"]
+[ext_resource type="Texture2D" uid="uid://b5ecacm7y6djx" path="res://Assets/UI_Menu/UI_Title_menu.png" id="2_31cf8"]
+[ext_resource type="Texture2D" uid="uid://bxvgohbxyyf8p" path="res://Assets/UI_Menu/UI_Single_play_button.png" id="3_aw4wf"]
+[ext_resource type="Texture2D" uid="uid://do83highkx0h3" path="res://Assets/UI_Menu/UI_Multi_play_button.png" id="4_ujcy0"]
+[ext_resource type="Texture2D" uid="uid://cll4qxvbue7fn" path="res://Assets/UI_Menu/UI_Credits_button.png" id="5_cwe2k"]
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_msryi")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="moldura" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -311.0
+offset_top = -171.0
+offset_right = 311.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wf6tc")
+metadata/_edit_lock_ = true
+
+[node name="main_container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19375
+anchor_top = 0.216667
+anchor_right = 0.81875
+anchor_bottom = 0.802778
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+metadata/_edit_use_anchors_ = true
+
+[node name="tilte_menu" type="TextureRect" parent="main_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+texture = ExtResource("2_31cf8")
+stretch_mode = 3
+
+[node name="buttons_container" type="VBoxContainer" parent="main_container"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 15
+
+[node name="single_play_button" type="TextureButton" parent="main_container/buttons_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_aw4wf")
+stretch_mode = 3
+
+[node name="multi_play_button" type="TextureButton" parent="main_container/buttons_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_ujcy0")
+stretch_mode = 3
+
+[node name="credits_button" type="TextureButton" parent="main_container/buttons_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_cwe2k")
+stretch_mode = 3
