@@ -63,6 +63,12 @@ move_up_player2={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Players"
+2d_physics/layer_2="Ground"
+2d_physics/layer_3="Spikes"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
