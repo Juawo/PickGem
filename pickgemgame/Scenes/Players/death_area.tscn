@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1q71t0ur76iu"]
+
+[ext_resource type="Script" path="res://Scripts/death_area.gd" id="1_yp7cj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eudop"]
+size = Vector2(640, 20)
+
+[node name="death_area" type="Area2D"]
+position = Vector2(0, -20)
+script = ExtResource("1_yp7cj")
+
+[node name="reset_timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_eudop")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="reset_timer" to="." method="_on_reset_timer_timeout"]

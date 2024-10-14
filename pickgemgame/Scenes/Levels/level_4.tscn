@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://h3y4klwjhhnx"]
+
+[ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_h4pyw"]
+[ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_0rg73"]
+[ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="3_0r1m5"]
+[ext_resource type="PackedScene" uid="uid://cek13mbirq1v8" path="res://Scenes/Levels/level_5.tscn" id="4_dyt0u"]
+[ext_resource type="PackedScene" uid="uid://dc0pb7uf4k0bk" path="res://Scenes/Players/player_1.tscn" id="4_y73il"]
+
+[node name="level_4" type="Node2D"]
+
+[node name="background" parent="." instance=ExtResource("1_h4pyw")]
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="GRADE" parent="." instance=ExtResource("2_0rg73")]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="gem" parent="." instance=ExtResource("3_0r1m5")]
+position = Vector2(320, 120)
+next_scene = ExtResource("4_dyt0u")
+
+[node name="player_1" parent="." instance=ExtResource("4_y73il")]
+position = Vector2(320, 300)
+scale = Vector2(1, 1)
