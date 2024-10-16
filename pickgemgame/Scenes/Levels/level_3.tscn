@@ -1,12 +1,53 @@
-[gd_scene load_steps=8 format=4 uid="uid://bt2pp327mfaw7"]
+[gd_scene load_steps=12 format=4 uid="uid://bt2pp327mfaw7"]
 
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_tpt3t"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_6e3bj"]
 [ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="2_wbiy4"]
 [ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="3_5jai6"]
 [ext_resource type="PackedScene" uid="uid://dc0pb7uf4k0bk" path="res://Scenes/Players/player_1.tscn" id="4_7ui4f"]
-[ext_resource type="PackedScene" uid="uid://v3oa5hrpgdag" path="res://Scenes/Ground_Plataforms/one_way_plataform.tscn" id="5_26uh7"]
+[ext_resource type="Texture2D" uid="uid://dojsrr1wa51sc" path="res://Assets/OneWayPlataform.png" id="4_xw5a0"]
 [ext_resource type="PackedScene" uid="uid://h3y4klwjhhnx" path="res://Scenes/Levels/level_4.tscn" id="5_nmd35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvna2"]
+size = Vector2(122.708, 20)
+
+[sub_resource type="Animation" id="Animation_ig5pc"]
+resource_name = "new_animation"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(370, 263), Vector2(370, 105.315)]
+}
+
+[sub_resource type="Animation" id="Animation_ijgwr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(370, 263)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_10cbe"]
+_data = {
+"RESET": SubResource("Animation_ijgwr"),
+"new_animation": SubResource("Animation_ig5pc")
+}
 
 [node name="level_3" type="Node2D"]
 
@@ -20,6 +61,23 @@ position = Vector2(319, 348)
 [node name="tile_map_ground" parent="." instance=ExtResource("2_6e3bj")]
 tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAACAAIAAAADAAIAAAACAAIAAAACAAIAAAABAAAAAAABAAIAAAABAAAAAAACAAMAAAACAAIAAAABAAMAAAAAAAIAAAAmAAEAAAACAAAAAAAmABQAAAACAAIAAAABABQAAAABAAAAAAAlAAEAAAABAAAAAAAkAAEAAAABAAAAAAAjAAEAAAABAAAAAAAiAAEAAAAAAAIAAAAkAAIAAAAAAAIAAAAlAAIAAAABAAAAAAAmAAIAAAACAAIAAAAmAAMAAAABAAAAAAAmAAQAAAABAAAAAAAmAAUAAAABAAAAAAAmAAYAAAABAAAAAAAmAAcAAAABAAAAAAAmAAgAAAABAAAAAAAmAAkAAAABAAAAAAAmAAoAAAABAAAAAAAmAAsAAAABAAAAAAAmAAwAAAABAAAAAAAmAA0AAAABAAAAAAAmAA4AAAABAAAAAAAmAA8AAAABAAAAAAAmABAAAAABAAAAAAAmABEAAAABAAAAAAAmABIAAAABAAAAAAAmABMAAAABAAAAAAAlABQAAAABAAAAAAAkABQAAAABAAAAAAAjABQAAAABAAAAAAAiABQAAAABAAAAAAAhABQAAAABAAAAAAAgABQAAAABAAAAAAAfABQAAAAAAAIAAAAfABMAAAABAAAAAAAfABIAAAABAAAAAAAfABEAAAABAAAAAAAfABAAAAAAAAAAAAAgABAAAAABAAAAAAAhABAAAAABAAAAAAAiABAAAAABAAAAAAAjABAAAAABAAAAAAAkABAAAAABAAAAAAAlABAAAAABAAAAAAAlABEAAAABAAAAAAAlABIAAAABAAAAAAAkABIAAAABAAAAAAAkABMAAAABAAAAAAAjABMAAAABAAAAAAAiABMAAAABAAAAAAAhABMAAAABAAAAAAAgABMAAAABAAAAAAAgABIAAAABAAAAAAAgABEAAAABAAAAAAAhABEAAAABAAAAAAAiABEAAAABAAAAAAAiABIAAAABAAAAAAAhABIAAAABAAAAAAAjABEAAAABAAAAAAAkABEAAAABAAAAAAAjABIAAAABAAAAAAAlABMAAAABAAAAAAAkAA8AAAAAAAAAAAAlAA8AAAABAAAAAAAPABAAAAACAAAAAAAOABAAAAABAAAAAAANABAAAAAAAAAAAAANABEAAAABAAAAAAANABIAAAABAAAAAAANABMAAAABAAAAAAANABQAAAAAAAIAAAAOABQAAAABAAAAAAAPABQAAAACAAIAAAAPABMAAAABAAAAAAAPABIAAAABAAAAAAAPABEAAAABAAAAAAAOABEAAAABAAAAAAAOABIAAAABAAAAAAAOABMAAAABAAAAAAABAAoAAAAAAAAAAAACAAoAAAABAAAAAAAEAAsAAAACAAAAAAAHAA4AAAACAAAAAAAHAA8AAAABAAAAAAAHABAAAAABAAAAAAAHABEAAAABAAAAAAAHABQAAAABAAAAAAAHABMAAAABAAAAAAAHABIAAAABAAAAAAAGABQAAAABAAAAAAAFABQAAAABAAAAAAAEABQAAAABAAAAAAADABQAAAABAAAAAAACABQAAAABAAAAAAABABMAAAABAAAAAAABABIAAAABAAAAAAABABEAAAABAAAAAAABABAAAAABAAAAAAABAA8AAAABAAAAAAABAA4AAAABAAAAAAABAA0AAAABAAAAAAABAAwAAAABAAAAAAABAAsAAAABAAAAAAACAAsAAAABAAAAAAACAAwAAAABAAAAAAACAA0AAAABAAAAAAACABIAAAABAAAAAAACABMAAAABAAAAAAADABMAAAABAAAAAAADABIAAAABAAAAAAADABEAAAABAAAAAAADABAAAAABAAAAAAACAA8AAAABAAAAAAACABAAAAABAAAAAAACABEAAAABAAAAAAACAA4AAAABAAAAAAADAA0AAAABAAAAAAADAAwAAAABAAAAAAADAAsAAAABAAAAAAADAA4AAAABAAAAAAAEAA0AAAABAAAAAAAEAAwAAAABAAAAAAAFAAwAAAACAAAAAAAFAA0AAAABAAAAAAAFAA4AAAABAAAAAAAFAA8AAAABAAAAAAAEAA8AAAABAAAAAAADAA8AAAABAAAAAAAEAA4AAAABAAAAAAAFABAAAAABAAAAAAAFABEAAAABAAAAAAAFABIAAAABAAAAAAAEABIAAAABAAAAAAAEABMAAAABAAAAAAAEABAAAAABAAAAAAAEABEAAAABAAAAAAAFABMAAAABAAAAAAAGABMAAAABAAAAAAAGABIAAAABAAAAAAAGABEAAAABAAAAAAAGABAAAAABAAAAAAAGAA8AAAABAAAAAAAGAA4AAAABAAAAAAANAAQAAAAAAAAAAAAOAAQAAAABAAAAAAAPAAQAAAACAAAAAAAPAAUAAAACAAIAAAAOAAUAAAABAAAAAAANAAUAAAAAAAIAAAAOAAYAAAAAAAIAAAAPAAYAAAABAAAAAAAQAAYAAAACAAIAAAAQAAUAAAACAAAAAAABAAkAAAABAAAAAAABAAgAAAABAAAAAAABAAcAAAABAAAAAAABAAYAAAABAAAAAAABAAUAAAABAAAAAAABAAQAAAABAAAAAAADAAoAAAACAAAAAAA=")
 
+[node name="move_plataform_1" type="StaticBody2D" parent="."]
+position = Vector2(370, 263)
+scale = Vector2(0.541935, 0.659394)
+
+[node name="Sprite2D" type="Sprite2D" parent="move_plataform_1"]
+texture = ExtResource("4_xw5a0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="move_plataform_1"]
+position = Vector2(0.230713, 0)
+shape = SubResource("RectangleShape2D_xvna2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="move_plataform_1"]
+libraries = {
+"": SubResource("AnimationLibrary_10cbe")
+}
+autoplay = "new_animation"
+
 [node name="gem" parent="." instance=ExtResource("3_5jai6")]
 position = Vector2(103, 102)
 next_scene = ExtResource("5_nmd35")
@@ -27,7 +85,3 @@ next_scene = ExtResource("5_nmd35")
 [node name="player_1" parent="." instance=ExtResource("4_7ui4f")]
 position = Vector2(524, 238.243)
 scale = Vector2(0.72, 0.76)
-
-[node name="one_way_plataform" parent="." instance=ExtResource("5_26uh7")]
-position = Vector2(374, 251)
-scale = Vector2(0.509668, 0.563405)

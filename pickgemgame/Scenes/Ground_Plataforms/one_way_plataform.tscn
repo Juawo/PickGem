@@ -3,16 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://dojsrr1wa51sc" path="res://Assets/OneWayPlataform.png" id="1_1hjva"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s72al"]
-size = Vector2(146, 21)
+size = Vector2(125.461, 21)
 
 [node name="one_way_plataform" type="StaticBody2D"]
 physics_interpolation_mode = 2
-position = Vector2(0, -12)
+position = Vector2(0, -8)
+scale = Vector2(0.542, 0.659)
 
 [node name="texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_1hjva")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(-7.03819e-06, 0.500002)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_s72al")
 one_way_collision = true
