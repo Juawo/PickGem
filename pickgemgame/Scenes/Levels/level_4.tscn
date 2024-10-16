@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://h3y4klwjhhnx"]
+[gd_scene load_steps=16 format=4 uid="uid://h3y4klwjhhnx"]
 
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_h4pyw"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_0rg73"]
@@ -7,9 +7,25 @@
 [ext_resource type="PackedScene" uid="uid://cek13mbirq1v8" path="res://Scenes/Levels/level_5.tscn" id="4_dyt0u"]
 [ext_resource type="PackedScene" uid="uid://dc0pb7uf4k0bk" path="res://Scenes/Players/player_1.tscn" id="4_y73il"]
 [ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="6_w718l"]
+[ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="8_hyncx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qppjs"]
 size = Vector2(122.708, 20)
+
+[sub_resource type="Animation" id="Animation_80rg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(153, 100)]
+}
 
 [sub_resource type="Animation" id="Animation_m0j4b"]
 resource_name = "new_animation"
@@ -28,7 +44,13 @@ tracks/0/keys = {
 "values": [Vector2(153, 100), Vector2(153, 260)]
 }
 
-[sub_resource type="Animation" id="Animation_80rg2"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xl6ca"]
+_data = {
+"RESET": SubResource("Animation_80rg2"),
+"new_animation": SubResource("Animation_m0j4b")
+}
+
+[sub_resource type="Animation" id="Animation_t30jd"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -40,13 +62,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(153, 100)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xl6ca"]
-_data = {
-"RESET": SubResource("Animation_80rg2"),
-"new_animation": SubResource("Animation_m0j4b")
+"values": [Vector2(392, 260)]
 }
 
 [sub_resource type="Animation" id="Animation_t5w7x"]
@@ -64,21 +80,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(392, 260), Vector2(392, 100)]
-}
-
-[sub_resource type="Animation" id="Animation_t30jd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(392, 260)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yhask"]
@@ -140,3 +141,9 @@ scale = Vector2(1, 1)
 
 [node name="death_area" parent="." instance=ExtResource("6_w718l")]
 position = Vector2(319, 351)
+
+[node name="Pause_menu" parent="." instance=ExtResource("8_hyncx")]
+offset_left = 320.0
+offset_top = 180.0
+offset_right = 320.0
+offset_bottom = 180.0

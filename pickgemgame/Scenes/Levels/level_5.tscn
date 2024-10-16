@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://cek13mbirq1v8"]
+[gd_scene load_steps=8 format=4 uid="uid://cek13mbirq1v8"]
 
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_mg7s4"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_it0ys"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="3_su4um"]
 [ext_resource type="PackedScene" uid="uid://dc0pb7uf4k0bk" path="res://Scenes/Players/player_1.tscn" id="4_2chtp"]
 [ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="6_dvu8i"]
+[ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="7_2pmlr"]
 
 [node name="level_5" type="Node2D"]
 
@@ -31,3 +32,9 @@ position = Vector2(536.103, 239.179)
 [node name="player_1" parent="." instance=ExtResource("4_2chtp")]
 position = Vector2(83.4724, 285.619)
 scale = Vector2(0.72, 0.76)
+
+[node name="Pause_menu" parent="." instance=ExtResource("7_2pmlr")]
+offset_left = 320.0
+offset_top = 180.0
+offset_right = 320.0
+offset_bottom = 180.0
