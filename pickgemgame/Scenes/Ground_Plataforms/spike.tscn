@@ -4,26 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://bgs4px3qupe1x" path="res://Assets/ground_spike.png" id="1_xbj28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_di5l6"]
-size = Vector2(8, 16)
+size = Vector2(5, 8.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk078"]
-size = Vector2(18, 21)
+size = Vector2(11, 13.5)
 
 [node name="spike" type="StaticBody2D"]
-position = Vector2(0, -8)
+position = Vector2(0, -10)
+collision_layer = 4
 script = ExtResource("1_djsfu")
 
 [node name="texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_xbj28")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0.5, 5.25)
 shape = SubResource("RectangleShape2D_di5l6")
 
 [node name="hurtbox" type="Area2D" parent="."]
 
 [node name="collision2" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(0, -0.5)
+position = Vector2(0.5, 2.75)
 shape = SubResource("RectangleShape2D_qk078")
 debug_color = Color(0.972133, 0, 0.443166, 0.42)
 

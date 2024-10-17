@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bt2pp327mfaw7"]
+[gd_scene load_steps=14 format=4 uid="uid://bt2pp327mfaw7"]
 
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_tpt3t"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_6e3bj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dojsrr1wa51sc" path="res://Assets/OneWayPlataform.png" id="4_xw5a0"]
 [ext_resource type="PackedScene" uid="uid://h3y4klwjhhnx" path="res://Scenes/Levels/level_4.tscn" id="5_nmd35"]
 [ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="8_fbwbb"]
+[ext_resource type="PackedScene" uid="uid://81jv5we3joka" path="res://Scenes/Ground_Plataforms/spike.tscn" id="9_8nknu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvna2"]
 size = Vector2(122.708, 20)
@@ -65,6 +66,7 @@ tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAA
 [node name="move_plataform_1" type="StaticBody2D" parent="."]
 position = Vector2(370, 263)
 scale = Vector2(0.541935, 0.659394)
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="move_plataform_1"]
 texture = ExtResource("4_xw5a0")
@@ -79,12 +81,18 @@ libraries = {
 }
 autoplay = "new_animation"
 
+[node name="spike" parent="." instance=ExtResource("9_8nknu")]
+position = Vector2(589.021, 228.588)
+
+[node name="spike4" parent="." instance=ExtResource("9_8nknu")]
+position = Vector2(263.021, 68.3385)
+
 [node name="gem" parent="." instance=ExtResource("3_5jai6")]
 position = Vector2(103, 102)
 next_scene = ExtResource("5_nmd35")
 
 [node name="player_1" parent="." instance=ExtResource("4_7ui4f")]
-position = Vector2(524, 238.243)
+position = Vector2(549.25, 238.993)
 scale = Vector2(0.72, 0.76)
 
 [node name="Pause_menu" parent="." instance=ExtResource("8_fbwbb")]

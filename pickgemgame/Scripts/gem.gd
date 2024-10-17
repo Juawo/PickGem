@@ -19,7 +19,7 @@ func add_score(body: CharacterBody2D) -> void:
 func change_level(scene : PackedScene):
 	$CollisionShape2D.queue_free()
 	self.visible = false
-	timer_level.start(3.0)
+	timer_level.start(1.0)
 	await timer_level.timeout
 	get_tree().change_scene_to_packed(scene)
 	self.queue_free()
