@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://bt2pp327mfaw7"]
+[gd_scene load_steps=16 format=4 uid="uid://bt2pp327mfaw7"]
 
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_tpt3t"]
+[ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_xj8hm"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_6e3bj"]
 [ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="2_wbiy4"]
 [ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="3_5jai6"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://h3y4klwjhhnx" path="res://Scenes/Levels/level_4.tscn" id="5_nmd35"]
 [ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="8_fbwbb"]
 [ext_resource type="PackedScene" uid="uid://81jv5we3joka" path="res://Scenes/Ground_Plataforms/spike.tscn" id="9_8nknu"]
+[ext_resource type="PackedScene" uid="uid://cneatjovo0eek" path="res://Scenes/UI/score_players.tscn" id="10_kso6q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvna2"]
 size = Vector2(122.708, 20)
@@ -52,6 +54,7 @@ _data = {
 }
 
 [node name="level_3" type="Node2D"]
+script = ExtResource("1_xj8hm")
 
 [node name="background" parent="." instance=ExtResource("1_tpt3t")]
 offset_right = 640.0
@@ -92,7 +95,7 @@ position = Vector2(103, 102)
 next_scene = ExtResource("5_nmd35")
 
 [node name="player_1" parent="." instance=ExtResource("4_7ui4f")]
-position = Vector2(549.25, 238.993)
+position = Vector2(549, 238)
 scale = Vector2(0.72, 0.76)
 
 [node name="Pause_menu" parent="." instance=ExtResource("8_fbwbb")]
@@ -100,3 +103,14 @@ offset_left = 320.0
 offset_top = 180.0
 offset_right = 320.0
 offset_bottom = 180.0
+
+[node name="score_players" parent="." instance=ExtResource("10_kso6q")]
+anchors_preset = 9
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 23.0
+offset_right = 641.0
+offset_bottom = 43.0
+grow_horizontal = 1
+size_flags_horizontal = 1

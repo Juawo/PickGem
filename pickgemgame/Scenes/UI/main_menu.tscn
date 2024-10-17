@@ -80,3 +80,5 @@ texture_hover = ExtResource("9_44ule")
 stretch_mode = 3
 
 [connection signal="pressed" from="main_container/buttons_container/single_play_button" to="." method="_on_single_play_button_pressed"]
+[connection signal="pressed" from="main_container/buttons_container/multi_play_button" to="." method="_on_multi_play_button_pressed"]
+[connection signal="pressed" from="main_container/buttons_container/credits_button" to="." method="_on_credits_button_pressed"]

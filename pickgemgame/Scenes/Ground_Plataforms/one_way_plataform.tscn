@@ -9,12 +9,12 @@ size = Vector2(125.461, 21)
 physics_interpolation_mode = 2
 position = Vector2(0, -8)
 scale = Vector2(0.542, 0.659)
+collision_layer = 4
 
 [node name="texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_1hjva")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(-7.03819e-06, 0.500002)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_s72al")
 one_way_collision = true

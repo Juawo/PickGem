@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://dao5nhyof7d3s"]
+[gd_scene load_steps=12 format=4 uid="uid://dao5nhyof7d3s"]
 
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_axrv5"]
+[ext_resource type="Script" path="res://Scripts/level_2.gd" id="1_olot2"]
 [ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="2_303nr"]
 [ext_resource type="PackedScene" uid="uid://v3oa5hrpgdag" path="res://Scenes/Ground_Plataforms/one_way_plataform.tscn" id="3_mid6n"]
 [ext_resource type="PackedScene" uid="uid://bt2pp327mfaw7" path="res://Scenes/Levels/level_3.tscn" id="3_qd43w"]
@@ -9,47 +10,62 @@
 [ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="6_njvdm"]
 [ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="8_xf7fd"]
 [ext_resource type="PackedScene" uid="uid://81jv5we3joka" path="res://Scenes/Ground_Plataforms/spike.tscn" id="9_bsga7"]
+[ext_resource type="PackedScene" uid="uid://cneatjovo0eek" path="res://Scenes/UI/score_players.tscn" id="10_ax7a2"]
 
 [node name="level_2" type="Node2D"]
+script = ExtResource("1_olot2")
 
 [node name="background" parent="." instance=ExtResource("1_axrv5")]
 offset_right = 640.0
 offset_bottom = 360.0
 
 [node name="one_way_plataform" parent="." instance=ExtResource("3_mid6n")]
-position = Vector2(312, 253)
+position = Vector2(312, 257)
 
 [node name="one_way_plataform2" parent="." instance=ExtResource("3_mid6n")]
-position = Vector2(102, 225)
+position = Vector2(102, 229)
 
 [node name="tile_map_ground" parent="." instance=ExtResource("4_cbo25")]
+position = Vector2(0, 4)
 tile_map_data = PackedByteArray("AAAmAAIAAAACAAAAAAAmAAMAAAACAAIAAAAhAAIAAAAAAAIAAAAiAAIAAAABAAAAAAAjAAIAAAABAAAAAAAkAAIAAAABAAAAAAAlAAIAAAABAAAAAAAjAAMAAAAAAAIAAAAkAAMAAAABAAAAAAAlAAMAAAABAAAAAAAdAAkAAAACAAIAAAAdAAgAAAACAAAAAAAcAAkAAAABAAAAAAAcAAgAAAABAAAAAAAcAAcAAAABAAAAAAAcAAYAAAACAAAAAAAbAAYAAAAAAAAAAAAbAAcAAAAAAAAAAAAbAAgAAAABAAAAAAAbAAkAAAAAAAIAAAAOAAUAAAAAAAAAAAAPAAUAAAACAAAAAAANAAYAAAAAAAAAAAAOAAYAAAABAAAAAAAPAAYAAAABAAAAAAAPAAcAAAACAAIAAAAOAAcAAAABAAAAAAANAAcAAAAAAAIAAAAgAAEAAAAAAAAAAAAhAAEAAAABAAAAAAAiAAEAAAABAAAAAAAjAAEAAAABAAAAAAAkAAEAAAABAAAAAAAlAAEAAAABAAAAAAAmAAEAAAACAAAAAAABABEAAAABAAAAAAABABIAAAABAAAAAAABABMAAAABAAAAAAABABQAAAAAAAIAAAACABEAAAABAAAAAAACABIAAAABAAAAAAACABMAAAABAAAAAAACABQAAAABAAAAAAADABEAAAABAAAAAAADABIAAAABAAAAAAADABMAAAABAAAAAAADABQAAAABAAAAAAAEABMAAAABAAAAAAAEABQAAAABAAAAAAAFABQAAAABAAAAAAAGABQAAAABAAAAAAAHABQAAAABAAAAAAAIABIAAAABAAAAAAAIABMAAAABAAAAAAAIABQAAAABAAAAAAAJABIAAAABAAAAAAAJABMAAAABAAAAAAAJABQAAAABAAAAAAABABAAAAAAAAAAAAACABAAAAABAAAAAAADABAAAAACAAAAAAAEABIAAAACAAAAAAAFABMAAAABAAAAAAAGABMAAAABAAAAAAAHABMAAAABAAAAAAAIABEAAAAAAAAAAAAJABEAAAACAAAAAAASABIAAAAAAAAAAAASABMAAAABAAAAAAASABQAAAABAAAAAAATABIAAAABAAAAAAATABMAAAABAAAAAAATABQAAAABAAAAAAAUABIAAAACAAAAAAAUABMAAAABAAAAAAAUABQAAAABAAAAAAAcABQAAAAAAAAAAAAdABQAAAABAAAAAAAeABQAAAABAAAAAAAfABQAAAABAAAAAAAgABQAAAABAAAAAAAhABQAAAABAAAAAAAiABIAAAAAAAAAAAAiABMAAAABAAAAAAAiABQAAAABAAAAAAAjABEAAAAAAAAAAAAjABIAAAABAAAAAAAjABMAAAABAAAAAAAjABQAAAABAAAAAAAkABAAAAAAAAAAAAAkABEAAAABAAAAAAAkABIAAAABAAAAAAAkABMAAAABAAAAAAAkABQAAAABAAAAAAAlABAAAAABAAAAAAAlABEAAAABAAAAAAAlABIAAAABAAAAAAAlABMAAAABAAAAAAAlABQAAAABAAAAAAAmABAAAAABAAAAAAAmABEAAAABAAAAAAAmABIAAAABAAAAAAAmABMAAAABAAAAAAAmABQAAAACAAIAAAABAAIAAAAAAAAAAAACAAIAAAABAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAABAAAAAAAFAAEAAAABAAAAAAAGAAEAAAABAAAAAAAHAAEAAAACAAIAAAADAAIAAAABAAAAAAADAAMAAAACAAIAAAACAAMAAAACAAIAAAABAAMAAAABAAAAAAABAAQAAAAAAAIAAAACAAQAAAACAAIAAAAEAAIAAAACAAIAAAABAAEAAAAAAAAAAAA=")
 
 [node name="death_area" parent="." instance=ExtResource("6_njvdm")]
-position = Vector2(320, 352)
+position = Vector2(320, 356)
 scale = Vector2(1.34572, 1)
 
 [node name="spike" parent="." instance=ExtResource("9_bsga7")]
-position = Vector2(93, 293)
+position = Vector2(93, 297)
 
 [node name="spike2" parent="." instance=ExtResource("9_bsga7")]
-position = Vector2(109, 293)
+position = Vector2(109, 297)
 
 [node name="spike5" parent="." instance=ExtResource("9_bsga7")]
-position = Vector2(514, 309)
+position = Vector2(514, 313)
 
 [node name="spike6" parent="." instance=ExtResource("9_bsga7")]
-position = Vector2(484, 309)
+position = Vector2(484, 313)
 
 [node name="gem" parent="." instance=ExtResource("2_303nr")]
-position = Vector2(103, 139)
+position = Vector2(103, 143)
 next_scene = ExtResource("3_qd43w")
 
 [node name="player_1" parent="." instance=ExtResource("5_vxfhr")]
-position = Vector2(597, 190)
+position = Vector2(597, 194)
+collision_mask = 6
 
 [node name="Pause_menu" parent="." instance=ExtResource("8_xf7fd")]
 offset_left = 320.0
 offset_top = 180.0
 offset_right = 320.0
 offset_bottom = 180.0
+
+[node name="score_players" parent="." instance=ExtResource("10_ax7a2")]
+anchors_preset = 9
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 23.0
+offset_right = 641.0
+offset_bottom = 43.0
+grow_horizontal = 1
+size_flags_horizontal = 1

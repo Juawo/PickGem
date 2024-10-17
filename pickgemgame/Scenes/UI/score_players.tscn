@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://cneatjovo0eek"]
+
+[ext_resource type="Script" path="res://Scripts/score_players.gd" id="1_61q4h"]
+[ext_resource type="Texture2D" uid="uid://bwi37xaihexes" path="res://Assets/UI_Menu/UI_Player1.png" id="2_ursll"]
+[ext_resource type="Texture2D" uid="uid://dy0jhhq84q37s" path="res://Assets/UI_Menu/UI_Player2.png" id="3_80r7b"]
+
+[node name="score_players" type="Control"]
+custom_minimum_size = Vector2(640, 20)
+layout_mode = 3
+anchor_right = 0.997
+anchor_bottom = 0.071
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 0.919983
+offset_bottom = 15.44
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_61q4h")
+metadata/_edit_vertical_guides_ = [20.0, -147.0, 620.0]
+
+[node name="score_player_1" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0328125
+anchor_top = 0.0583333
+anchor_right = 0.191687
+anchor_bottom = 0.169333
+offset_right = 0.32
+offset_bottom = 0.0399971
+theme_override_constants/separation = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="icon_player_1" type="TextureRect" parent="score_player_1"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_ursll")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="score_player_1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="score_player_2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.809375
+anchor_top = 0.0583333
+anchor_right = 0.96825
+anchor_bottom = 0.169333
+offset_right = 0.32
+offset_bottom = 0.0399971
+theme_override_constants/separation = 5
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="score_player_2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="icon_player_2" type="TextureRect" parent="score_player_2"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("3_80r7b")
+stretch_mode = 3
