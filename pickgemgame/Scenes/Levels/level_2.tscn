@@ -51,7 +51,6 @@ next_scene = ExtResource("3_qd43w")
 
 [node name="player_1" parent="." instance=ExtResource("5_vxfhr")]
 position = Vector2(597, 194)
-collision_mask = 6
 
 [node name="Pause_menu" parent="." instance=ExtResource("8_xf7fd")]
 offset_left = 320.0

@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://btq3rq4jlym2v"]
+
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_rqthd"]
+[ext_resource type="Texture2D" uid="uid://bwi37xaihexes" path="res://Assets/UI_Menu/UI_Player1.png" id="1_vqq0b"]
+[ext_resource type="Texture2D" uid="uid://dy0jhhq84q37s" path="res://Assets/UI_Menu/UI_Player2.png" id="2_5fquv"]
+
+[node name="game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rqthd")
+
+[node name="margin_container_content" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="panel_container_content" type="PanelContainer" parent="margin_container_content"]
+layout_mode = 2
+
+[node name="margin_content" type="MarginContainer" parent="margin_container_content/panel_container_content"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="vertical_container_content" type="VBoxContainer" parent="margin_container_content/panel_container_content/margin_content"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="game_over_label" type="Label" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "FIM DE JOGO!"
+horizontal_alignment = 1
+
+[node name="player_win_label" type="Label" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "PLAYER 1 WIN!!"
+horizontal_alignment = 1
+
+[node name="horizontal_container_scores" type="HBoxContainer" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="player_1_container" type="VBoxContainer" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores"]
+layout_mode = 2
+
+[node name="player_1_score_container" type="HBoxContainer" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_1_container"]
+layout_mode = 2
+alignment = 1
+
+[node name="player_1_icon" type="TextureRect" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_1_container/player_1_score_container"]
+layout_mode = 2
+texture = ExtResource("1_vqq0b")
+expand_mode = 3
+
+[node name="player_1_label" type="Label" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_1_container/player_1_score_container"]
+layout_mode = 2
+text = "Player 1"
+
+[node name="player_1_score_label" type="Label" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_1_container"]
+layout_mode = 2
+text = "Score : "
+horizontal_alignment = 1
+
+[node name="player_2_container" type="VBoxContainer" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores"]
+layout_mode = 2
+
+[node name="player_2_score_container" type="HBoxContainer" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_2_container"]
+layout_mode = 2
+alignment = 1
+
+[node name="player_2_icon" type="TextureRect" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_2_container/player_2_score_container"]
+layout_mode = 2
+texture = ExtResource("2_5fquv")
+expand_mode = 3
+
+[node name="player_2_label" type="Label" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_2_container/player_2_score_container"]
+layout_mode = 2
+text = "Player 2"
+
+[node name="player_2_score_label" type="Label" parent="margin_container_content/panel_container_content/margin_content/vertical_container_content/horizontal_container_scores/player_2_container"]
+layout_mode = 2
+text = "Score : "
+horizontal_alignment = 1

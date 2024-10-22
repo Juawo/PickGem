@@ -3,10 +3,11 @@ extends Control
 @onready var label: Label = $score_player_1/Label
 @onready var label_2: Label = $score_player_2/Label
 
-@export var two_players : bool = true
+@export var two_players : bool 
 @onready var score_player_2: HBoxContainer = $score_player_2
 
 func _ready() -> void:
+	two_players = players_data.multiplayer_on 
 	if two_players:
 		score_player_2.show()
 		

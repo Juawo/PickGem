@@ -43,6 +43,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="score_player_2" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.809375

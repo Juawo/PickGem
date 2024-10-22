@@ -11,7 +11,8 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("move_up_player2") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		if Engine.time_scale != 0:
+			velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

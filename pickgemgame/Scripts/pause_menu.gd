@@ -20,4 +20,7 @@ func _on_replay_button_pressed() -> void:
 	pause_menu()
 
 func _on_return_button_pressed() -> void:
+	players_data.score_player_1 = 0
+	players_data.score_player_2 = 0
+	pause_menu()
 	get_tree().change_scene_to_file("res://Scenes/UI/main_menu.tscn")
