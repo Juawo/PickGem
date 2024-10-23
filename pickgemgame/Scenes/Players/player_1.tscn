@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc0pb7uf4k0bk"]
+[gd_scene load_steps=5 format=3 uid="uid://dc0pb7uf4k0bk"]
 
 [ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_f2r4r"]
 [ext_resource type="Texture2D" uid="uid://ctpr0ykgdqq01" path="res://Assets/Player1.png" id="2_a80yc"]
+[ext_resource type="PackedScene" uid="uid://ckvo6b470vtbe" path="res://Scenes/Players/cpu_particles_p_1.tscn" id="2_eaqmd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhpgt"]
 size = Vector2(36, 39)
@@ -12,9 +13,19 @@ scale = Vector2(0.719999, 0.76)
 collision_mask = 6
 script = ExtResource("1_f2r4r")
 
+[node name="respawn_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="cpu_particles_P1" parent="." instance=ExtResource("2_eaqmd")]
+scale = Vector2(1, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1)
 texture = ExtResource("2_a80yc")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_vhpgt")
+
+[connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]
