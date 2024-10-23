@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_di5l6"]
 size = Vector2(5, 8.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk078"]
-size = Vector2(11, 13.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nyti"]
+size = Vector2(9.73452, 13.5575)
 
 [node name="spike" type="StaticBody2D"]
 position = Vector2(0, -10)
@@ -21,11 +21,12 @@ texture = ExtResource("1_xbj28")
 position = Vector2(0.5, 5.25)
 shape = SubResource("RectangleShape2D_di5l6")
 
-[node name="hurtbox" type="Area2D" parent="."]
+[node name="Hurt_box" type="Area2D" parent="."]
+position = Vector2(0, 0.28)
+scale = Vector2(1.25, 0.922)
 
-[node name="collision2" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(0.5, 2.75)
-shape = SubResource("RectangleShape2D_qk078")
-debug_color = Color(0.972133, 0, 0.443166, 0.42)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt_box"]
+position = Vector2(0.442478, 3.22126)
+shape = SubResource("RectangleShape2D_0nyti")
 
-[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="body_entered" from="Hurt_box" to="." method="_on_hurt_box_body_entered"]

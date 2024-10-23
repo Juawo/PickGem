@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1q71t0ur76iu"]
+[gd_scene load_steps=4 format=3 uid="uid://c1q71t0ur76iu"]
 
 [ext_resource type="Script" path="res://Scripts/death_area.gd" id="1_yp7cj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eudop"]
 size = Vector2(640, 20)
 
+[sub_resource type="Curve" id="Curve_1klf6"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.098901), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="death_area" type="Area2D"]
-position = Vector2(0, -20)
 script = ExtResource("1_yp7cj")
 
 [node name="reset_timer" type="Timer" parent="."]
@@ -14,6 +17,40 @@ wait_time = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_eudop")
+
+[node name="cpu_particles_P1" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 30
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, -1)
+spread = 20.0
+initial_velocity_min = 400.0
+initial_velocity_max = 500.0
+radial_accel_max = 100.0
+damping_max = 7.0
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_1klf6")
+color = Color(0.980392, 0.172549, 0.227451, 1)
+
+[node name="cpu_particles_P2" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 30
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, -1)
+spread = 20.0
+initial_velocity_min = 400.0
+initial_velocity_max = 500.0
+radial_accel_max = 100.0
+damping_max = 7.0
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_1klf6")
+color = Color(0.176471, 0.698039, 0.980392, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="reset_timer" to="." method="_on_reset_timer_timeout"]
