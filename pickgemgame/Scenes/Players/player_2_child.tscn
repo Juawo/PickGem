@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcckx04b4cep"]
+
+[ext_resource type="Script" path="res://Scenes/Players/player_2_child.gd" id="1_wvk6m"]
+[ext_resource type="PackedScene" uid="uid://ckvo6b470vtbe" path="res://Scenes/Players/cpu_particles_p_1.tscn" id="2_rpxm0"]
+[ext_resource type="Texture2D" uid="uid://bqpxs1g00ny4w" path="res://Assets/Player2.png" id="3_emj8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhpgt"]
+size = Vector2(36, 39)
+
+[node name="player_2_child" type="CharacterBody2D" groups=["Players"]]
+position = Vector2(0, -15)
+scale = Vector2(0.719999, 0.76)
+collision_mask = 6
+script = ExtResource("1_wvk6m")
+
+[node name="respawn_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="cpu_particles_P1" parent="." instance=ExtResource("2_rpxm0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_emj8w")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_vhpgt")
+
+[connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]

@@ -17,15 +17,12 @@ script = ExtResource("1_f2r4r")
 one_shot = true
 
 [node name="cpu_particles_P1" parent="." instance=ExtResource("2_eaqmd")]
-scale = Vector2(1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 1)
 texture = ExtResource("2_a80yc")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_vhpgt")
 
 [connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]
