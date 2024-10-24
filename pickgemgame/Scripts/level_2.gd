@@ -1,6 +1,6 @@
 extends Node2D
 
-var player_2_scene := preload("res://Scenes/Players/player_2.tscn")
+var player_2_scene := preload("res://Scenes/Players/player_2_child.tscn")
 
 func _ready() -> void:
 	if players_data.multiplayer_on:

@@ -17,23 +17,6 @@ var is_death := false
 func _ready() -> void:
 	initial_position = self.global_position
 	
-func _physics_process(delta: float) -> void:
-	if !is_death:
-		if not is_on_floor():
-			velocity += get_gravity() * delta
-		
-		if Input.is_action_just_pressed("move_up") and is_on_floor():
-			if Engine.time_scale != 0:
-				velocity.y = JUMP_VELOCITY
-
-		var direction := Input.get_axis("move_left", "move_right")
-		if direction:
-			velocity.x = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-
-		move_and_slide()
-
 func player_death():
 	is_death = true
 	sprite_2d.hide()
