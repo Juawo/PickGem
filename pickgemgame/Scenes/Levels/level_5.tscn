@@ -1,19 +1,20 @@
 [gd_scene load_steps=12 format=4 uid="uid://cek13mbirq1v8"]
 
-[ext_resource type="Script" path="res://Scripts/level_5.gd" id="1_55r1a"]
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_mg7s4"]
+[ext_resource type="Script" path="res://Scripts/levels_scritps/level_5.gd" id="1_njj50"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_it0ys"]
 [ext_resource type="PackedScene" uid="uid://v3oa5hrpgdag" path="res://Scenes/Ground_Plataforms/one_way_plataform.tscn" id="3_pw51y"]
 [ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="3_su4um"]
-[ext_resource type="PackedScene" uid="uid://dc0pb7uf4k0bk" path="res://Scenes/Players/player_1.tscn" id="4_2chtp"]
-[ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="6_dvu8i"]
+[ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Levels/death_area.tscn" id="6_dvu8i"]
 [ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="7_2pmlr"]
 [ext_resource type="PackedScene" uid="uid://81jv5we3joka" path="res://Scenes/Ground_Plataforms/spike.tscn" id="8_iy3jl"]
 [ext_resource type="PackedScene" uid="uid://btq3rq4jlym2v" path="res://Scenes/UI/game_over.tscn" id="8_ka0ti"]
 [ext_resource type="PackedScene" uid="uid://cneatjovo0eek" path="res://Scenes/UI/score_players.tscn" id="9_aito3"]
+[ext_resource type="PackedScene" uid="uid://baiiixpvytmuo" path="res://Scenes/Players/player_1.tscn" id="9_jft20"]
 
 [node name="level_5" type="Node2D"]
-script = ExtResource("1_55r1a")
+script = ExtResource("1_njj50")
+initial_position_p2 = Vector2(83, 285)
 
 [node name="background" parent="." instance=ExtResource("1_mg7s4")]
 offset_right = 640.0
@@ -47,9 +48,8 @@ position = Vector2(239.672, 308.457)
 position = Vector2(536.103, 239.179)
 next_scene = ExtResource("8_ka0ti")
 
-[node name="player_1" parent="." instance=ExtResource("4_2chtp")]
+[node name="player_1" parent="." instance=ExtResource("9_jft20")]
 position = Vector2(83, 285)
-scale = Vector2(0.72, 0.76)
 
 [node name="Pause_menu" parent="." instance=ExtResource("7_2pmlr")]
 offset_left = 320.0

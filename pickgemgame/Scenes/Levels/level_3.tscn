@@ -1,15 +1,15 @@
 [gd_scene load_steps=16 format=4 uid="uid://bt2pp327mfaw7"]
 
+[ext_resource type="Script" path="res://Scripts/levels_scritps/level_3.gd" id="1_jxbdr"]
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_tpt3t"]
-[ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_xj8hm"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="2_6e3bj"]
-[ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="2_wbiy4"]
+[ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Levels/death_area.tscn" id="2_wbiy4"]
 [ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="3_5jai6"]
-[ext_resource type="PackedScene" uid="uid://dc0pb7uf4k0bk" path="res://Scenes/Players/player_1.tscn" id="4_7ui4f"]
 [ext_resource type="Texture2D" uid="uid://dojsrr1wa51sc" path="res://Assets/OneWayPlataform.png" id="4_xw5a0"]
 [ext_resource type="PackedScene" uid="uid://h3y4klwjhhnx" path="res://Scenes/Levels/level_4.tscn" id="5_nmd35"]
 [ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="8_fbwbb"]
 [ext_resource type="PackedScene" uid="uid://81jv5we3joka" path="res://Scenes/Ground_Plataforms/spike.tscn" id="9_8nknu"]
+[ext_resource type="PackedScene" uid="uid://baiiixpvytmuo" path="res://Scenes/Players/player_1.tscn" id="9_m3eku"]
 [ext_resource type="PackedScene" uid="uid://cneatjovo0eek" path="res://Scenes/UI/score_players.tscn" id="10_kso6q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvna2"]
@@ -54,7 +54,8 @@ _data = {
 }
 
 [node name="level_3" type="Node2D"]
-script = ExtResource("1_xj8hm")
+script = ExtResource("1_jxbdr")
+initial_position_p2 = Vector2(549, 238)
 
 [node name="background" parent="." instance=ExtResource("1_tpt3t")]
 offset_right = 640.0
@@ -94,9 +95,8 @@ position = Vector2(263.021, 68.3385)
 position = Vector2(103, 102)
 next_scene = ExtResource("5_nmd35")
 
-[node name="player_1" parent="." instance=ExtResource("4_7ui4f")]
+[node name="player_1" parent="." instance=ExtResource("9_m3eku")]
 position = Vector2(549, 238)
-scale = Vector2(0.72, 0.76)
 
 [node name="Pause_menu" parent="." instance=ExtResource("8_fbwbb")]
 offset_left = 320.0

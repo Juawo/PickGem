@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfl5np4to7v50"]
 
 [ext_resource type="Texture2D" uid="uid://blwyiflsuplm3" path="res://Assets/UI_Menu/UI_Play_pause_button.png" id="1_eycfb"]
-[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_l1tew"]
+[ext_resource type="Script" path="res://Scripts/ui_scripts/pause_menu.gd" id="1_fedhl"]
 [ext_resource type="Texture2D" uid="uid://btsavrkx1xul2" path="res://Assets/UI_Menu/UI_Play_pause_button_hover.png" id="2_2qmba"]
 [ext_resource type="PackedScene" uid="uid://djx7cy4cigvbc" path="res://Scenes/UI/moldura.tscn" id="2_wv15m"]
 [ext_resource type="Texture2D" uid="uid://b6vte80pxek57" path="res://Assets/UI_Menu/UI_Return_pause_button.png" id="3_cauya"]
@@ -18,7 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-script = ExtResource("1_l1tew")
+script = ExtResource("1_fedhl")
 
 [node name="Moldura" parent="." instance=ExtResource("2_wv15m")]
 layout_mode = 1

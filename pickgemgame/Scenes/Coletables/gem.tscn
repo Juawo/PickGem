@@ -1,15 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr16cy2kr85gh"]
+[gd_scene load_steps=4 format=3 uid="uid://dr16cy2kr85gh"]
 
-[ext_resource type="Script" path="res://Scripts/gem.gd" id="1_buxvk"]
 [ext_resource type="Texture2D" uid="uid://ynmc87ydf83d" path="res://Assets/Gem.png" id="1_kdvwt"]
-[ext_resource type="PackedScene" uid="uid://bvh8abi4ffrne" path="res://Scenes/control.tscn" id="2_57ha4"]
+[ext_resource type="Script" path="res://Scripts/levels_scritps/gem.gd" id="1_plthp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cri2p"]
 size = Vector2(22.6272, 22.5282)
 
 [node name="gem" type="Area2D"]
-script = ExtResource("1_buxvk")
-next_scene = ExtResource("2_57ha4")
+script = ExtResource("1_plthp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_kdvwt")

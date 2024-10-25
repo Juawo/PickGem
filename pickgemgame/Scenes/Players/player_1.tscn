@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc0pb7uf4k0bk"]
+[gd_scene load_steps=5 format=3 uid="uid://baiiixpvytmuo"]
 
-[ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_f2r4r"]
+[ext_resource type="Script" path="res://Scripts/players_scripts/player_1_child.gd" id="1_lpoxq"]
 [ext_resource type="Texture2D" uid="uid://ctpr0ykgdqq01" path="res://Assets/Player1.png" id="2_a80yc"]
 [ext_resource type="PackedScene" uid="uid://ckvo6b470vtbe" path="res://Scenes/Players/cpu_particles_p_1.tscn" id="2_eaqmd"]
 
@@ -11,7 +11,7 @@ size = Vector2(36, 39)
 position = Vector2(0, -15)
 scale = Vector2(0.719999, 0.76)
 collision_mask = 6
-script = ExtResource("1_f2r4r")
+script = ExtResource("1_lpoxq")
 
 [node name="respawn_timer" type="Timer" parent="."]
 one_shot = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://81jv5we3joka"]
 
-[ext_resource type="Script" path="res://Scripts/spike.gd" id="1_djsfu"]
+[ext_resource type="Script" path="res://Scripts/levels_scritps/spike.gd" id="1_ctc0m"]
 [ext_resource type="Texture2D" uid="uid://bgs4px3qupe1x" path="res://Assets/ground_spike.png" id="1_xbj28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_di5l6"]
@@ -12,7 +12,7 @@ size = Vector2(9.73452, 13.5575)
 [node name="spike" type="StaticBody2D"]
 position = Vector2(0, -10)
 collision_layer = 4
-script = ExtResource("1_djsfu")
+script = ExtResource("1_ctc0m")
 
 [node name="texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_xbj28")

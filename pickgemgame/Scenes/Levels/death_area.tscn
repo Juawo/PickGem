@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1q71t0ur76iu"]
 
-[ext_resource type="Script" path="res://Scripts/death_area.gd" id="1_yp7cj"]
+[ext_resource type="Script" path="res://Scripts/levels_scritps/death_area.gd" id="1_b7vvb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eudop"]
 size = Vector2(640, 20)
@@ -10,7 +10,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.098901), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="death_area" type="Area2D"]
-script = ExtResource("1_yp7cj")
+script = ExtResource("1_b7vvb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_eudop")

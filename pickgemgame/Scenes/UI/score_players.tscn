@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cneatjovo0eek"]
 
-[ext_resource type="Script" path="res://Scripts/score_players.gd" id="1_61q4h"]
+[ext_resource type="Script" path="res://Scripts/ui_scripts/score_players.gd" id="1_333gn"]
 [ext_resource type="Texture2D" uid="uid://bwi37xaihexes" path="res://Assets/UI_Menu/UI_Player1.png" id="2_ursll"]
 [ext_resource type="Texture2D" uid="uid://dy0jhhq84q37s" path="res://Assets/UI_Menu/UI_Player2.png" id="3_80r7b"]
 
@@ -17,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-script = ExtResource("1_61q4h")
+script = ExtResource("1_333gn")
 metadata/_edit_vertical_guides_ = [20.0, -147.0, 620.0]
 
 [node name="score_player_1" type="HBoxContainer" parent="."]

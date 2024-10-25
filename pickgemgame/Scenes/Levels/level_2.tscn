@@ -1,19 +1,20 @@
 [gd_scene load_steps=12 format=4 uid="uid://dao5nhyof7d3s"]
 
+[ext_resource type="Script" path="res://Scripts/levels_scritps/level_2.gd" id="1_7ejht"]
 [ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="1_axrv5"]
-[ext_resource type="Script" path="res://Scripts/level_2.gd" id="1_olot2"]
 [ext_resource type="PackedScene" uid="uid://dr16cy2kr85gh" path="res://Scenes/Coletables/gem.tscn" id="2_303nr"]
 [ext_resource type="PackedScene" uid="uid://v3oa5hrpgdag" path="res://Scenes/Ground_Plataforms/one_way_plataform.tscn" id="3_mid6n"]
 [ext_resource type="PackedScene" uid="uid://bt2pp327mfaw7" path="res://Scenes/Levels/level_3.tscn" id="3_qd43w"]
 [ext_resource type="PackedScene" uid="uid://hix6wc0ad5ru" path="res://Scenes/Ground_Plataforms/tile_map_ground.tscn" id="4_cbo25"]
-[ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Players/death_area.tscn" id="6_njvdm"]
+[ext_resource type="PackedScene" uid="uid://c1q71t0ur76iu" path="res://Scenes/Levels/death_area.tscn" id="6_njvdm"]
 [ext_resource type="PackedScene" uid="uid://bfl5np4to7v50" path="res://Scenes/UI/pause_menu.tscn" id="8_xf7fd"]
 [ext_resource type="PackedScene" uid="uid://81jv5we3joka" path="res://Scenes/Ground_Plataforms/spike.tscn" id="9_bsga7"]
 [ext_resource type="PackedScene" uid="uid://cneatjovo0eek" path="res://Scenes/UI/score_players.tscn" id="10_ax7a2"]
-[ext_resource type="PackedScene" uid="uid://baiiixpvytmuo" path="res://Scenes/Players/player_1_child.tscn" id="11_3o3t2"]
+[ext_resource type="PackedScene" uid="uid://baiiixpvytmuo" path="res://Scenes/Players/player_1.tscn" id="11_3o3t2"]
 
 [node name="level_2" type="Node2D"]
-script = ExtResource("1_olot2")
+script = ExtResource("1_7ejht")
+initial_position_p2 = Vector2(596, 218)
 metadata/_edit_vertical_guides_ = [189.0]
 
 [node name="background" parent="." instance=ExtResource("1_axrv5")]
@@ -50,6 +51,10 @@ position = Vector2(484, 313)
 position = Vector2(103, 143)
 next_scene = ExtResource("3_qd43w")
 
+[node name="player_1" parent="." instance=ExtResource("11_3o3t2")]
+position = Vector2(596, 218)
+respawn_time = null
+
 [node name="Pause_menu" parent="." instance=ExtResource("8_xf7fd")]
 offset_left = 320.0
 offset_top = 180.0
@@ -66,6 +71,3 @@ offset_right = 641.0
 offset_bottom = 43.0
 grow_horizontal = 1
 size_flags_horizontal = 1
-
-[node name="player_1_child" parent="." instance=ExtResource("11_3o3t2")]
-position = Vector2(596, 218)
