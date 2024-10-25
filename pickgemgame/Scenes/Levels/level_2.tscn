@@ -53,7 +53,6 @@ next_scene = ExtResource("3_qd43w")
 
 [node name="player_1" parent="." instance=ExtResource("11_3o3t2")]
 position = Vector2(596, 218)
-respawn_time = null
 
 [node name="Pause_menu" parent="." instance=ExtResource("8_xf7fd")]
 offset_left = 320.0

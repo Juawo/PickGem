@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dr16cy2kr85gh"]
+[gd_scene load_steps=5 format=3 uid="uid://dr16cy2kr85gh"]
 
 [ext_resource type="Texture2D" uid="uid://ynmc87ydf83d" path="res://Assets/Gem.png" id="1_kdvwt"]
 [ext_resource type="Script" path="res://Scripts/levels_scritps/gem.gd" id="1_plthp"]
+
+[sub_resource type="Curve" id="Curve_hvdd6"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 0.549451), -0.914167, -0.914167, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cri2p"]
 size = Vector2(22.6272, 22.5282)
@@ -9,10 +13,25 @@ size = Vector2(22.6272, 22.5282)
 [node name="gem" type="Area2D"]
 script = ExtResource("1_plthp")
 
+[node name="particles" type="CPUParticles2D" parent="."]
+amount = 10
+texture = ExtResource("1_kdvwt")
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+scale_amount_min = 0.2
+scale_amount_max = 0.4
+scale_amount_curve = SubResource("Curve_hvdd6")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_kdvwt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-0.0348453, 0.0351509)
 rotation = -0.789773
 shape = SubResource("RectangleShape2D_cri2p")

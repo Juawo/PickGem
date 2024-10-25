@@ -15,7 +15,7 @@ func add_score(body: CharacterBody2D) -> void:
 			players_data.score_player_2 += 1
 		body.score += 1
 		print("Player 1: ",str(players_data.score_player_1),"\n Player 2: ", str(players_data.score_player_2) )
-
+	
 func change_level(scene : PackedScene):
 	$CollisionShape2D.queue_free()
 	self.visible = false
