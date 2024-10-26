@@ -1,4 +1,4 @@
-# 🌟 PickGem - Jogo Plataforma de Coleta de Gemas 🌟
+# 🌟 PickGem [EM CONSTRUÇÃO] 🌟
 
 ![Godot](https://img.shields.io/badge/Godot-v4.3-blue) ![Git](https://img.shields.io/badge/Git-Version%20Control-green) ![VSCode](https://img.shields.io/badge/VSCode-Code%20Editor-blue) ![Krita](https://img.shields.io/badge/Krita-Image%20Editor-lightblue)
 
