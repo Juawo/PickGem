@@ -22,7 +22,6 @@ color = Color(0.176471, 0.698039, 0.980392, 1)
 
 [node name="jump_particles" parent="." instance=ExtResource("3_hsmlc")]
 position = Vector2(0, 10)
-scale = Vector2(1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_co4hm")

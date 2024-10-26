@@ -19,7 +19,6 @@ one_shot = true
 
 [node name="jump_particles" parent="." instance=ExtResource("2_oq783")]
 position = Vector2(0, 13.1579)
-scale = Vector2(1, 1)
 
 [node name="cpu_particles_P1" parent="." instance=ExtResource("2_eaqmd")]
 
