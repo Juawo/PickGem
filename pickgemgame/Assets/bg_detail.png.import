@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbmellfd0auql"
-path="res://.godot/imported/preview.png-42c3208469fd9db4194ff0a332909e0f.ctex"
+uid="uid://b8n3ewei7lb4b"
+path="res://.godot/imported/bg_detail.png-a1c5c0430a60515086a9f9d868b36f23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fontes/font/retro-pixel-font-bdf-v2024.05.12/cute-prop/preview.png"
-dest_files=["res://.godot/imported/preview.png-42c3208469fd9db4194ff0a332909e0f.ctex"]
+source_file="res://Assets/bg_detail.png"
+dest_files=["res://.godot/imported/bg_detail.png-a1c5c0430a60515086a9f9d868b36f23.ctex"]
 
 [params]
 

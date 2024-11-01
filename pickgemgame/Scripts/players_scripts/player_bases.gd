@@ -35,7 +35,6 @@ func player_respawn():
 	sprite_2d.show()
 
 func player_particles():
-	print('emitiu')
 	cpu_particles_p_1.emitting = true
 	cpu_particles_p_1.global_position.x = self.global_position.x
 
