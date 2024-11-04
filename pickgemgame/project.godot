@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 players_data="*res://Scripts/globals.gd"
+BgSoundtrackGlobal="*res://Scripts/bg_soundtrack_global.gd"
 
 [display]
 

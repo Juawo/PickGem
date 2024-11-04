@@ -35,12 +35,6 @@ next_scene = ExtResource("4_h23kj")
 [node name="player_1" parent="." instance=ExtResource("7_sghqs")]
 position = Vector2(320, 304)
 
-[node name="Pause_menu" parent="." instance=ExtResource("6_y2vxr")]
-offset_left = 320.0
-offset_top = 180.0
-offset_right = 320.0
-offset_bottom = 180.0
-
 [node name="score_players" parent="." instance=ExtResource("8_r8iyu")]
 anchors_preset = 9
 anchor_right = 0.0
@@ -51,3 +45,9 @@ offset_right = 641.0
 offset_bottom = 43.0
 grow_horizontal = 1
 size_flags_horizontal = 1
+
+[node name="Pause_menu" parent="." instance=ExtResource("6_y2vxr")]
+offset_left = 320.0
+offset_top = 180.0
+offset_right = 320.0
+offset_bottom = 180.0

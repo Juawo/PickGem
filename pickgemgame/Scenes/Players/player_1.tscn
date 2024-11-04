@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://baiiixpvytmuo"]
+[gd_scene load_steps=8 format=3 uid="uid://baiiixpvytmuo"]
 
 [ext_resource type="Script" path="res://Scripts/players_scripts/player_1_child.gd" id="1_lpoxq"]
 [ext_resource type="Texture2D" uid="uid://ctpr0ykgdqq01" path="res://Assets/Player1.png" id="2_a80yc"]
 [ext_resource type="PackedScene" uid="uid://ckvo6b470vtbe" path="res://Scenes/Players/cpu_particles_p_1.tscn" id="2_eaqmd"]
 [ext_resource type="PackedScene" uid="uid://cdrnoojs2elk0" path="res://Scenes/Players/jump_particles.tscn" id="2_oq783"]
+[ext_resource type="PackedScene" uid="uid://b6lnbp4bq2fmi" path="res://Scenes/sound_effects/sound_jump.tscn" id="5_1as2p"]
+[ext_resource type="PackedScene" uid="uid://frxq45542y8l" path="res://Scenes/sound_effects/sound_death.tscn" id="5_tx4or"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhpgt"]
 size = Vector2(36, 39)
@@ -28,5 +30,9 @@ texture = ExtResource("2_a80yc")
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_vhpgt")
+
+[node name="sound_death" parent="." instance=ExtResource("5_tx4or")]
+
+[node name="sound_jump" parent="." instance=ExtResource("5_1as2p")]
 
 [connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]

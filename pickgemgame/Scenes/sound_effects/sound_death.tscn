@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://frxq45542y8l"]
+
+[ext_resource type="AudioStream" uid="uid://n5hje3hupmfq" path="res://sounds/character-falling-on-ground-250069.mp3" id="1_voq6i"]
+
+[node name="sound_death" type="AudioStreamPlayer"]
+stream = ExtResource("1_voq6i")

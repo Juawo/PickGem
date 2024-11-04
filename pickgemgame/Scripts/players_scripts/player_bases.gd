@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var cpu_particles_p_1: CPUParticles2D = $cpu_particles_P1
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var jump_particles: CPUParticles2D = $jump_particles
+@onready var sound_jump: AudioStreamPlayer = $sound_jump
+@onready var sound_death: AudioStreamPlayer = $sound_death
 
 @export var respawn_time : float = 1.5
 
@@ -26,13 +28,19 @@ func player_death():
 	collision.disabled = is_death
 	respawn_timer.start(respawn_time)
 	player_particles()
+	player_death_sound()
 
+func player_death_sound():
+	sound_death.play()
 func player_respawn():
 	is_death = false
 	collision.disabled = is_death
 	velocity = Vector2.ZERO
 	global_position = initial_position
 	sprite_2d.show()
+
+func player_sound_jump():
+	sound_jump.play()
 
 func player_particles():
 	cpu_particles_p_1.emitting = true

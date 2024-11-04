@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr16cy2kr85gh"]
+[gd_scene load_steps=6 format=3 uid="uid://dr16cy2kr85gh"]
 
 [ext_resource type="Texture2D" uid="uid://ynmc87ydf83d" path="res://Assets/Gem.png" id="1_kdvwt"]
 [ext_resource type="Script" path="res://Scripts/levels_scritps/gem.gd" id="1_plthp"]
+[ext_resource type="AudioStream" uid="uid://ga2iy04gh8hh" path="res://sounds/592346__axilirate__collect-crystal.wav" id="3_txkpy"]
 
 [sub_resource type="Curve" id="Curve_hvdd6"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 0.549451), -0.914167, -0.914167, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -37,6 +38,9 @@ rotation = -0.789773
 shape = SubResource("RectangleShape2D_cri2p")
 
 [node name="timer_change_level" type="Timer" parent="."]
+
+[node name="pickup_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_txkpy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="timer_change_level" to="." method="_on_timer_change_level_timeout"]

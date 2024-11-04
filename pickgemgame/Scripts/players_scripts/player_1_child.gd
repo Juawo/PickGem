@@ -8,6 +8,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("move_up_player1") and is_on_floor():
 			if Engine.time_scale != 0:
 				player_jump_tween()
+				player_sound_jump()
 				velocity.y = JUMP_VELOCITY
 
 		var direction := Input.get_axis("move_left_player1", "move_right_player1")

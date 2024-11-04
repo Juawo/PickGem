@@ -1,7 +1,6 @@
 extends Control
 
 var paused := false
-@onready var color_rect: ColorRect = $ColorRect
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
@@ -14,8 +13,9 @@ func pause_menu() -> void:
 	else:
 		self.show()
 		Engine.time_scale = 0
+		
 	paused = !paused
-	
+
 func _on_replay_button_pressed() -> void:
 	pause_menu()
 

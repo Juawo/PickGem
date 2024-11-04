@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6lnbp4bq2fmi"]
+
+[ext_resource type="AudioStream" uid="uid://bl2sp3p8yf5qp" path="res://sounds/350899__cabled_mess__jump_c_09.wav" id="1_2ng11"]
+
+[node name="sound_jump" type="AudioStreamPlayer"]
+stream = ExtResource("1_2ng11")
+volume_db = 1.0

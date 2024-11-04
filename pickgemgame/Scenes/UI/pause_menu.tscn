@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfl5np4to7v50"]
+[gd_scene load_steps=9 format=3 uid="uid://bfl5np4to7v50"]
 
 [ext_resource type="Texture2D" uid="uid://blwyiflsuplm3" path="res://Assets/UI_Menu/UI_Play_pause_button.png" id="1_eycfb"]
 [ext_resource type="Script" path="res://Scripts/ui_scripts/pause_menu.gd" id="1_fedhl"]
 [ext_resource type="Texture2D" uid="uid://btsavrkx1xul2" path="res://Assets/UI_Menu/UI_Play_pause_button_hover.png" id="2_2qmba"]
+[ext_resource type="Shader" path="res://shaders/background/blur_bg_pause_menu.gdshader" id="2_sey46"]
 [ext_resource type="PackedScene" uid="uid://djx7cy4cigvbc" path="res://Scenes/UI/moldura.tscn" id="2_wv15m"]
 [ext_resource type="Texture2D" uid="uid://b6vte80pxek57" path="res://Assets/UI_Menu/UI_Return_pause_button.png" id="3_cauya"]
 [ext_resource type="Texture2D" uid="uid://dcx3cqux3d2qc" path="res://Assets/UI_Menu/UI_Return_pause_button_hover.png" id="4_thmxn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jav2n"]
+shader = ExtResource("2_sey46")
+shader_parameter/amount = 3.0
 
 [node name="Pause_menu" type="Control"]
 process_mode = 1
@@ -19,6 +24,16 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_fedhl")
+
+[node name="blur_bg" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_jav2n")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Moldura" parent="." instance=ExtResource("2_wv15m")]
 layout_mode = 1
