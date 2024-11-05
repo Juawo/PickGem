@@ -139,6 +139,7 @@ autoplay = "new_animation"
 
 [node name="death_area" parent="." instance=ExtResource("6_w718l")]
 position = Vector2(319, 351)
+scale = Vector2(1.52, 1)
 
 [node name="gem" parent="." instance=ExtResource("3_0r1m5")]
 position = Vector2(560, 99)

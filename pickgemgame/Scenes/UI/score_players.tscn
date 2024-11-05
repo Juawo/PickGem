@@ -46,6 +46,7 @@ theme_override_constants/outline_size = 5
 text = "2 "
 
 [node name="score_player_2" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.809375
