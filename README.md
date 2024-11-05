@@ -68,7 +68,7 @@ O projeto *PickGem* foi criado com foco em estudo e aprendizado, destacando:
 
 ## ⚙️ Como Rodar o Projeto
 
-1. Acessar arquivo .exe ou x86_64
+1. Acessar arquivo .exe (Windows) ou x86_64(Linux)
 2. Baixar arquivo
 3. Executar arquivo
 
