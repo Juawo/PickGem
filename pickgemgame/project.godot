@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="PickGemGame"
+config/description="Jogo plataforma single ou multiplayer local, pegue a gema e descubra uma nova fase!"
 config/version="1.0.0"
 run/main_scene="res://Scenes/UI/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://logo.png"
 
 [autoload]
 

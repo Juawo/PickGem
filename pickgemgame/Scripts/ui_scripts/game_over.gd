@@ -8,6 +8,7 @@ extends Control
 var main_menu_scene = preload("res://Scenes/UI/main_menu.tscn")
 
 func _ready() -> void:
+	BgSoundtrackGlobal.play_music_level(-5.0)
 	players_score()
 	player_wins()
 

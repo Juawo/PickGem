@@ -4,3 +4,4 @@
 
 [node name="sound_death" type="AudioStreamPlayer"]
 stream = ExtResource("1_voq6i")
+volume_db = 5.0

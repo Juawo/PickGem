@@ -26,6 +26,7 @@ size_flags_horizontal = 4
 script = ExtResource("1_fedhl")
 
 [node name="blur_bg" type="ColorRect" parent="."]
+texture_filter = 1
 material = SubResource("ShaderMaterial_jav2n")
 layout_mode = 1
 anchors_preset = 15

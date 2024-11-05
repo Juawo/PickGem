@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cd20tcqlwfkwb"]
+[gd_scene load_steps=3 format=3 uid="uid://cd20tcqlwfkwb"]
 
 [ext_resource type="Script" path="res://Scripts/ui_scripts/credits.gd" id="1_ogvau"]
+[ext_resource type="PackedScene" uid="uid://d233sja5ctuf5" path="res://Scenes/UI/background.tscn" id="2_g8xmj"]
 
 [node name="credits" type="Control"]
 layout_mode = 3
@@ -10,6 +11,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ogvau")
+
+[node name="background" parent="." instance=ExtResource("2_g8xmj")]
+layout_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -38,13 +42,13 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "PICK GEM!"
 horizontal_alignment = 1
 
@@ -52,24 +56,30 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 16
-text = "Esse jogo foi feito como um projetinho de ferias , para treinar o Basico da Godot, UI, Game Feel e Sounds"
+theme_override_font_sizes/font_size = 10
+text = "This game was made by Joao Pedro for study and practice purposes: Game Development, Game Feel, Game Juice and Godot Engine"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 16
-text = "Tudo aqui foi feito por Joao Pedro"
+theme_override_font_sizes/font_size = 10
+text = "Art - Joao Pedro
+Programming - Joao Pedro
+Music - Rezoner
+Jump SFX - cabled_mess
+Death SFX - UNIVERSFIELD
+Collect Gem SFX - axilirate"
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_constants/outline_size = 5
-text = "Softwares usados :
-Godot Engine, Krita e LMMS"
+theme_override_font_sizes/font_size = 10
+text = "Softwares:
+Godot Engine, Krita and VSCode"
 horizontal_alignment = 1
 
 [node name="return_button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
