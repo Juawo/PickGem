@@ -1,4 +1,4 @@
-# 🌟 PickGem [EM CONSTRUÇÃO] 🌟
+# 🌟 PickGem 🌟
 
 ![Godot](https://img.shields.io/badge/Godot-v4.3-blue) ![Git](https://img.shields.io/badge/Git-Version%20Control-green) ![VSCode](https://img.shields.io/badge/VSCode-Code%20Editor-blue) ![Krita](https://img.shields.io/badge/Krita-Image%20Editor-lightblue)
 
@@ -62,18 +62,15 @@ O projeto *PickGem* foi criado com foco em estudo e aprendizado, destacando:
 
 ## 🎨 Próximos Passos
 
-- Adicionar sons para melhorar o *game feel* e tornar o jogo mais imersivo.
-- Incluir mais efeitos visuais de *game juice*.
+- Versão Mobile
 - Desenvolver fases adicionais com novos desafios.
 
 
 ## ⚙️ Como Rodar o Projeto
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/pickgem.git
-   Abra o Godot Engine e importe o projeto
-   Clique em Run para iniciar o jogo.
+1. Acessar arquivo .exe ou x86_64
+2. Baixar arquivo
+3. Executar arquivo
 
 ## 📜 Licença
 
